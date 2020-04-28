@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Supltz.github.io/"/>
-  <updated>2020-04-28T09:57:14.515Z</updated>
+  <updated>2020-04-28T10:06:39.298Z</updated>
   <id>http://Supltz.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://Supltz.github.io/2020/04/27/ML.html/"/>
     <id>http://Supltz.github.io/2020/04/27/ML.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
-    <updated>2020-04-28T09:57:14.515Z</updated>
+    <updated>2020-04-28T10:06:39.298Z</updated>
     
     <content type="html"><![CDATA[<p>xxxxxx有感<br><a id="more"></a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -43,7 +43,7 @@
     <link href="http://Supltz.github.io/2020/04/27/Android.html/"/>
     <id>http://Supltz.github.io/2020/04/27/Android.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
-    <updated>2020-04-28T10:02:32.483Z</updated>
+    <updated>2020-04-28T10:06:45.822Z</updated>
     
     <content type="html"><![CDATA[<p>Android入门<br><a id="more"></a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -65,7 +65,7 @@
     <link href="http://Supltz.github.io/2020/04/27/huawei.html/"/>
     <id>http://Supltz.github.io/2020/04/27/huawei.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
-    <updated>2020-04-28T09:48:08.227Z</updated>
+    <updated>2020-04-28T10:06:30.114Z</updated>
     
     <content type="html"><![CDATA[<p>使用华为云Model Arts 来做机器学习或深度学习相关项目<br><a id="more"></a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="python">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="python">import waveimport pyaudiofrom PIL import ImageGrabimport numpy as npimport cv2from moviepy.editor import *from moviepy.audio.fx import allimport timefrom pydub import AudioSegmentCHUNK = 1024FORMAT = pyaudio.paInt16CHANNELS = 2RATE = 44100WAVE_OUTPUT_FILENAME = &quot;output.wav&quot;p = pyaudio.PyAudio()wf = wave.open(WAVE_OUTPUT_FILENAME, &#39;wb&#39;)wf.setnchannels(CHANNELS)wf.setsampwidth(p.get_sample_size(FORMAT))wf.setframerate(RATE)audio_record_flag = Truedef callback(in_data, frame_count, time_info, status):    wf.writeframes(in_data)    if audio_record_flag:</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -87,7 +87,7 @@
     <link href="http://Supltz.github.io/2020/04/27/Thoughts_1.html/"/>
     <id>http://Supltz.github.io/2020/04/27/Thoughts_1.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
-    <updated>2020-04-28T09:51:38.870Z</updated>
+    <updated>2020-04-28T10:06:34.686Z</updated>
     
     <content type="html"><![CDATA[<p>xxxxxx有感<br><a id="more"></a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
