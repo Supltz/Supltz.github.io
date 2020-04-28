@@ -20,13 +20,13 @@
 <meta property="og:description" content="2132134214">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-28T06:03:32.374Z">
+<meta property="article:modified_time" content="2020-04-28T07:10:05.994Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-jiqixuexi">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588057427432">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588057819128">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -62,6 +62,13 @@
             <i class="mdui-list-item-icon nexmoefont icon-home"></i>
             <div class="mdui-list-item-content">
                 回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
             </div>
         </a>
         
@@ -169,7 +176,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月27日</a>
-    <a><i class="nexmoefont icon-areachart"></i>38 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>113 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -187,13 +194,42 @@
 
   <article>
     <p>2132134214<br><a id="more"></a></p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo newasdafasfsa</span><br></pre></td></tr></table></figure>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa
+</code></pre>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="python">$ hexo server
+</code></pre>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="python">import wave
+import pyaudio
+from PIL import ImageGrab
+import numpy as np
+import cv2
+from moviepy.editor import *
+from moviepy.audio.fx import all
+import time
+from pydub import AudioSegment
+
+
+CHUNK = 1024
+FORMAT = pyaudio.paInt16
+CHANNELS = 2
+RATE = 44100
+WAVE_OUTPUT_FILENAME = &quot;output.wav&quot;
+
+p = pyaudio.PyAudio()
+wf = wave.open(WAVE_OUTPUT_FILENAME, &#39;wb&#39;)
+wf.setnchannels(CHANNELS)
+wf.setsampwidth(p.get_sample_size(FORMAT))
+wf.setframerate(RATE)
+audio_record_flag = True
+def callback(in_data, frame_count, time_info, status):
+    wf.writeframes(in_data)
+    if audio_record_flag:
+</code></pre>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
   </article>
@@ -221,20 +257,24 @@
 
     
     <section class="nexmoe-comment">
-    <div id="gitment"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script id="dsq-count-scr" src="https://&lt;shortname&gt;.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
 <script>
-var gitment = new Gitment({
-    owner: 'Supltz', // 你的 GitHub ID
-    repo: 'Supltz.github.io', // 存储评论的 repo
-    oauth: {
-        client_id: 'b5d8b20817b948c508c3', // 你的 client ID
-        client_secret: '482c8dfe4687956568f547a12c2d90cfaeff07b7' // 你的 client secret
-    },
-})
-gitment.render('gitment')
+    var disqus_config = function () {
+        this.page.url = 'http://supltz.github.io/2020/04/27/index.html/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://supltz.github.io/2020/04/27/index.html/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
 </script>
+<script id="disqus-thread-script">
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//&lt;shortname&gt;.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
 </section>
   </div>
 </div>
@@ -242,7 +282,7 @@ gitment.render('gitment')
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588057427433"></script>-->
+<!--<script src="/js/app.js?v=1588057819130"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
