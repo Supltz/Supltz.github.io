@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://supltz.github.io/PY.html</loc>
+    
+    <lastmod>2020-04-28T10:12:00.711Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://supltz.github.io/2020/04/27/ML.html/</loc>
     
     <lastmod>2020-04-28T10:09:29.415Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://supltz.github.io/about.html</loc>
     
     <lastmod>2020-04-28T10:05:26.804Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://supltz.github.io/PY.html</loc>
-    
-    <lastmod>2020-04-28T10:01:42.144Z</lastmod>
     
   </url>
   
