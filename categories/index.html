@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588058770868">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588058861619">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -210,24 +210,20 @@
 
     
     <section class="nexmoe-comment">
-    <script id="dsq-count-scr" src="https://https-supltz-github-io-2020-04-27-ml-html.disqus.com/count.js" async></script>
-<div id="disqus_thread"></div>
+    <div id="gitment"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-    var disqus_config = function () {
-        this.page.url = 'http://supltz.github.io/categories/index.html'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://supltz.github.io/categories/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
+var gitment = new Gitment({
+    owner: 'Supltz', // 你的 GitHub ID
+    repo: 'Supltz.github.io', // 存储评论的 repo
+    oauth: {
+        client_id: 'b5d8b20817b948c508c3', // 你的 client ID
+        client_secret: '482c8dfe4687956568f547a12c2d90cfaeff07b7' // 你的 client secret
+    },
+})
+gitment.render('gitment')
 </script>
-<script id="disqus-thread-script">
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document;
-        var s = d.createElement('script');
-        s.src = '//https-supltz-github-io-2020-04-27-ml-html.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', + new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-
 </section>
   </div>
 </div>
@@ -235,7 +231,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588058770870"></script>-->
+<!--<script src="/js/app.js?v=1588058861620"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
