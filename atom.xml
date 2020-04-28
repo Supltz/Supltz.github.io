@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://Supltz.github.io/"/>
   <updated>2020-04-28T06:07:30.302Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://Supltz.github.io/</id>
   
   <author>
     <name>Supltz</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/04/27/ML.html/"/>
-    <id>http://yoursite.com/2020/04/27/ML.html/</id>
+    <link href="http://Supltz.github.io/2020/04/27/ML.html/"/>
+    <id>http://Supltz.github.io/2020/04/27/ML.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
     <updated>2020-04-28T06:07:30.302Z</updated>
     
@@ -36,8 +36,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/04/27/index.html/"/>
-    <id>http://yoursite.com/2020/04/27/index.html/</id>
+    <link href="http://Supltz.github.io/2020/04/27/index.html/"/>
+    <id>http://Supltz.github.io/2020/04/27/index.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
     <updated>2020-04-28T06:03:32.374Z</updated>
     
@@ -49,17 +49,17 @@
     
     </summary>
     
-      <category term="-jishu" scheme="http://yoursite.com/categories/jishu/"/>
+      <category term="-jishu" scheme="http://Supltz.github.io/categories/jishu/"/>
     
     
-      <category term="-jiqixuexi" scheme="http://yoursite.com/tags/jiqixuexi/"/>
+      <category term="-jiqixuexi" scheme="http://Supltz.github.io/tags/jiqixuexi/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/04/27/test.html/"/>
-    <id>http://yoursite.com/2020/04/27/test.html/</id>
+    <link href="http://Supltz.github.io/2020/04/27/test.html/"/>
+    <id>http://Supltz.github.io/2020/04/27/test.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
     <updated>2020-04-28T06:07:17.676Z</updated>
     
@@ -71,17 +71,17 @@
     
     </summary>
     
-      <category term="-技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="-技术" scheme="http://Supltz.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="-机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="-机器学习" scheme="http://Supltz.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Android</title>
-    <link href="http://yoursite.com/2020/04/27/Android.html/"/>
-    <id>http://yoursite.com/2020/04/27/Android.html/</id>
+    <link href="http://Supltz.github.io/2020/04/27/Android.html/"/>
+    <id>http://Supltz.github.io/2020/04/27/Android.html/</id>
     <published>2020-04-27T13:47:45.000Z</published>
     <updated>2020-04-28T06:07:28.186Z</updated>
     
@@ -93,10 +93,10 @@
     
     </summary>
     
-      <category term="-jishu" scheme="http://yoursite.com/categories/jishu/"/>
+      <category term="-jishu" scheme="http://Supltz.github.io/categories/jishu/"/>
     
     
-      <category term="-Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="-Android" scheme="http://Supltz.github.io/tags/Android/"/>
     
   </entry>
   
