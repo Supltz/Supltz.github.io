@@ -36,14 +36,14 @@
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_135_1.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/images/article_1/8.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-30T07:45:26.705Z">
+<meta property="article:modified_time" content="2020-04-30T07:50:19.801Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-机器学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/output_21_0.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588232733481">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588233026113">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -300,8 +300,7 @@ plot.rcParams.update(params)
 <p>进一步查看一下数据</p>
 <pre><code class="python">data.describe()
 </code></pre>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Fare</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>count</th><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>714.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>    </tr><br>    <tr><br>      <th>mean</th><br>      <td>446.000000</td><br>      <td>0.383838</td><br>      <td>2.308642</td><br>      <td>29.699118</td><br>      <td>0.523008</td><br>      <td>0.381594</td><br>      <td>32.204208</td><br>    </tr><br>    <tr><br>      <th>std</th><br>      <td>257.353842</td><br>      <td>0.486592</td><br>      <td>0.836071</td><br>      <td>14.526497</td><br>      <td>1.102743</td><br>      <td>0.806057</td><br>      <td>49.693429</td><br>    </tr><br>    <tr><br>      <th>min</th><br>      <td>1.000000</td><br>      <td>0.000000</td><br>      <td>1.000000</td><br>      <td>0.420000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>    </tr><br>    <tr><br>      <th>25%</th><br>      <td>223.500000</td><br>      <td>0.000000</td><br>      <td>2.000000</td><br>      <td>20.125000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>7.910400</td><br>    </tr><br>    <tr><br>      <th>50%</th><br>      <td>446.000000</td><br>      <td>0.000000</td><br>      <td>3.000000</td><br>      <td>28.000000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>14.454200</td><br>    </tr><br>    <tr><br>      <th>75%</th><br>      <td>668.500000</td><br>      <td>1.000000</td><br>      <td>3.000000</td><br>      <td>38.000000</td><br>      <td>1.000000</td><br>      <td>0.000000</td><br>      <td>31.000000</td><br>    </tr><br>    <tr><br>      <th>max</th><br>      <td>891.000000</td><br>      <td>1.000000</td><br>      <td>3.000000</td><br>      <td>80.000000</td><br>      <td>8.000000</td><br>      <td>6.000000</td><br>      <td>512.329200</td><br>    </tr><br>  </tbody><br></table><br></div>
-
+<details><br><summary>点击查看</summary><br><div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Fare</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>count</th><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>714.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>      <td>891.000000</td><br>    </tr><br>    <tr><br>      <th>mean</th><br>      <td>446.000000</td><br>      <td>0.383838</td><br>      <td>2.308642</td><br>      <td>29.699118</td><br>      <td>0.523008</td><br>      <td>0.381594</td><br>      <td>32.204208</td><br>    </tr><br>    <tr><br>      <th>std</th><br>      <td>257.353842</td><br>      <td>0.486592</td><br>      <td>0.836071</td><br>      <td>14.526497</td><br>      <td>1.102743</td><br>      <td>0.806057</td><br>      <td>49.693429</td><br>    </tr><br>    <tr><br>      <th>min</th><br>      <td>1.000000</td><br>      <td>0.000000</td><br>      <td>1.000000</td><br>      <td>0.420000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>    </tr><br>    <tr><br>      <th>25%</th><br>      <td>223.500000</td><br>      <td>0.000000</td><br>      <td>2.000000</td><br>      <td>20.125000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>7.910400</td><br>    </tr><br>    <tr><br>      <th>50%</th><br>      <td>446.000000</td><br>      <td>0.000000</td><br>      <td>3.000000</td><br>      <td>28.000000</td><br>      <td>0.000000</td><br>      <td>0.000000</td><br>      <td>14.454200</td><br>    </tr><br>    <tr><br>      <th>75%</th><br>      <td>668.500000</td><br>      <td>1.000000</td><br>      <td>3.000000</td><br>      <td>38.000000</td><br>      <td>1.000000</td><br>      <td>0.000000</td><br>      <td>31.000000</td><br>    </tr><br>    <tr><br>      <th>max</th><br>      <td>891.000000</td><br>      <td>1.000000</td><br>      <td>3.000000</td><br>      <td>80.000000</td><br>      <td>8.000000</td><br>      <td>6.000000</td><br>      <td>512.329200</td><br>    </tr><br>  </tbody><br></table><br></div><br></details>
 
 
 
@@ -915,7 +914,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588232733482"></script>-->
+<!--<script src="/js/app.js?v=1588233026115"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
