@@ -19,31 +19,23 @@
 <meta property="og:site_name" content="Supltz">
 <meta property="og:description" content="Kaggle入门(Titanic案例)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_21_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/1.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_24_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/2.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_28_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/3.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_32_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/4.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_36_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/5.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_40_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/6.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_43_0.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/7.png">
-<meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_135_1.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/8.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-30T08:45:38.524Z">
+<meta property="article:modified_time" content="2020-04-30T08:48:57.621Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-机器学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/output_21_0.png">
+<meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/1.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588236397958">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588236543133">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -319,14 +311,12 @@ plot.rcParams.update(params)
 <pre><code class="python">data.groupby(&#39;Sex&#39;).agg(&#39;sum&#39;)[[&#39;Survived&#39;, &#39;Died&#39;]].plot(kind=&#39;bar&#39;, figsize=(25, 7),
                                                           stacked=True);
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_21_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/1.png" alt="energy" class="lazyload"></p>
 <p>看起来男性更容易遇难，女性更容易获救。</p>
 <p>再看看他们的比例。</p>
 <pre><code class="python">data.groupby(&#39;Sex&#39;).agg(&#39;mean&#39;)[[&#39;Survived&#39;, &#39;Died&#39;]].plot(kind=&#39;bar&#39;, figsize=(25, 7),
                                                            stacked=True);
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_24_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/2.png" alt="energy" class="lazyload"></p>
 <p><strong>果然在危险的时候，男性总会挺身而出。。。</strong></p>
 <p>再来看看年龄吧</p>
@@ -337,7 +327,6 @@ sns.violinplot(x=&#39;Sex&#39;, y=&#39;Age&#39;,
                palette={0: &quot;r&quot;, 1: &quot;g&quot;}
               );
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_28_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/3.png" alt="energy" class="lazyload"></p>
 <p>从提琴图可以看出大概是在<strong>20-40</strong>岁的人存活率比较高</p>
 <p>老人和小孩都跑不动了吗。</p>
@@ -351,7 +340,6 @@ plt.xlabel(&#39;Fare&#39;)
 plt.ylabel(&#39;Number of passengers&#39;)
 plt.legend();
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_32_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/4.png" alt="energy" class="lazyload"></p>
 <p>看起来，票价高的人容易被获救，一般票价高的人可能社会地位会比较高。</p>
 <p>不过票价高的人还是比较稀少的</p>
@@ -365,7 +353,6 @@ ax.scatter(data[data[&#39;Survived&#39;] == 1][&#39;Age&#39;], data[data[&#39;Su
 ax.scatter(data[data[&#39;Survived&#39;] == 0][&#39;Age&#39;], data[data[&#39;Survived&#39;] == 0][&#39;Fare&#39;],
            c=&#39;red&#39;, s=data[data[&#39;Survived&#39;] == 0][&#39;Fare&#39;]);
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_36_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/5.png" alt="energy" class="lazyload"></p>
 <p>圆圈的大小与票价成正比。</p>
 <p>x轴是年龄，y轴是票价。</p>
@@ -380,13 +367,11 @@ ax.scatter(data[data[&#39;Survived&#39;] == 0][&#39;Age&#39;], data[data[&#39;Su
 ax.set_ylabel(&#39;Average fare&#39;)
 data.groupby(&#39;Pclass&#39;).mean()[&#39;Fare&#39;].plot(kind=&#39;bar&#39;, figsize=(25, 7), ax = ax);
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_40_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/6.png" alt="energy" class="lazyload"></p>
 <p>看看Embarked对存活率的影响</p>
 <pre><code class="python">fig = plt.figure(figsize=(25, 7))
 sns.violinplot(x=&#39;Embarked&#39;, y=&#39;Fare&#39;, hue=&#39;Survived&#39;, data=data, split=True, palette={0: &quot;r&quot;, 1: &quot;g&quot;});
 </code></pre>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_43_0.png" alt="png" class="lazyload"></p>
 <p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/7.png" alt="energy" class="lazyload"></p>
 <p>Embarked C 的票价似乎范围更广，可以看出，支付最高价的乘客就是幸存者。</p>
 <p>这种也情况发生在登船S上，但是发生在登船Q上的情况较少。</p>
@@ -755,8 +740,7 @@ features.set_index(&#39;feature&#39;, inplace=True)
 <pre><code class="python">features.plot(kind=&#39;barh&#39;, figsize=(25, 25))
 </code></pre>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1de03588eb8&gt;
-</code></pre><p><img data-sizes="auto" data-src="/2020/04/27/ML.html/output_135_1.png" alt="png" class="lazyload"></p>
-<p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/8.png" alt="energy" class="lazyload"></p>
+</code></pre><p><img data-sizes="auto" data-src="/2020/04/27/ML.html/article_1/8.png" alt="energy" class="lazyload"></p>
 <p>我们可以看到Title_Mr, Age, Fare, Sex等这些特征非常重要</p>
 <p>我们可以做筛选</p>
 <pre><code class="python">model = SelectFromModel(clf, prefit=True)
@@ -911,7 +895,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588236397959"></script>-->
+<!--<script src="/js/app.js?v=1588236543135"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
