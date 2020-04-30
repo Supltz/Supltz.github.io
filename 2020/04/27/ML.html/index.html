@@ -36,14 +36,14 @@
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_135_1.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/images/article_1/8.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-30T07:15:55.006Z">
+<meta property="article:modified_time" content="2020-04-30T07:26:12.505Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-机器学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/output_21_0.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588231060539">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588231591110">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -200,7 +200,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Data-Insights"><span class="toc-number">1.</span> <span class="toc-text">一、Data Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-、Feature-engineering"><span class="toc-number">2.</span> <span class="toc-text">二  、Feature engineering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#载入数据"><span class="toc-number">2.1.</span> <span class="toc-text">载入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Name的处理"><span class="toc-number">2.2.</span> <span class="toc-text">Name的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fare的处理"><span class="toc-number">2.3.</span> <span class="toc-text">Fare的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Age的处理"><span class="toc-number">2.4.</span> <span class="toc-text">Age的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embarked的处理"><span class="toc-number">2.5.</span> <span class="toc-text">Embarked的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cabin的处理"><span class="toc-number">2.6.</span> <span class="toc-text">Cabin的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#到目前这个数据集终于没有缺失的值了！"><span class="toc-number">2.6.1.</span> <span class="toc-text">到目前这个数据集终于没有缺失的值了！</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sex的-处理"><span class="toc-number">2.7.</span> <span class="toc-text">Sex的 处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pclass的处理"><span class="toc-number">2.8.</span> <span class="toc-text">Pclass的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ticket的处理"><span class="toc-number">2.9.</span> <span class="toc-text">Ticket的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Family的处理"><span class="toc-number">2.10.</span> <span class="toc-text">Family的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Modeling"><span class="toc-number">3.</span> <span class="toc-text">三、Modeling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature的选择"><span class="toc-number">3.1.</span> <span class="toc-text">Feature的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#看一下不同模型的表现情况（逻辑回归，逻辑回归-交叉验证，随机森林，gboost）"><span class="toc-number">3.2.</span> <span class="toc-text">看一下不同模型的表现情况（逻辑回归，逻辑回归_交叉验证，随机森林，gboost）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调参"><span class="toc-number">3.3.</span> <span class="toc-text">调参</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可以用模型进行预测然后上传啦！"><span class="toc-number">3.3.1.</span> <span class="toc-text">可以用模型进行预测然后上传啦！</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Blending-（模型融合）"><span class="toc-number">4.</span> <span class="toc-text">四、Blending （模型融合）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。"><span class="toc-number">4.0.1.</span> <span class="toc-text">但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前先做到这，有想法在持续跟近。"><span class="toc-number">4.0.2.</span> <span class="toc-text">目前先做到这，有想法在持续跟近。</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Data-Insights"><span class="toc-number">1.</span> <span class="toc-text">一、Data Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-、Feature-engineering"><span class="toc-number">2.</span> <span class="toc-text">二  、Feature engineering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Name的处理"><span class="toc-number">2.1.</span> <span class="toc-text">Name的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fare的处理"><span class="toc-number">2.2.</span> <span class="toc-text">Fare的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Age的处理"><span class="toc-number">2.3.</span> <span class="toc-text">Age的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embarked的处理"><span class="toc-number">2.4.</span> <span class="toc-text">Embarked的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cabin的处理"><span class="toc-number">2.5.</span> <span class="toc-text">Cabin的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sex的处理"><span class="toc-number">2.6.</span> <span class="toc-text">Sex的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pclass的处理"><span class="toc-number">2.7.</span> <span class="toc-text">Pclass的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ticket的处理"><span class="toc-number">2.8.</span> <span class="toc-text">Ticket的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Family的处理"><span class="toc-number">2.9.</span> <span class="toc-text">Family的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Modeling"><span class="toc-number">3.</span> <span class="toc-text">三、Modeling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature的选择"><span class="toc-number">3.1.</span> <span class="toc-text">Feature的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#看一下不同模型的表现"><span class="toc-number">3.2.</span> <span class="toc-text">看一下不同模型的表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调参"><span class="toc-number">3.3.</span> <span class="toc-text">调参</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Blending-（模型融合）"><span class="toc-number">4.</span> <span class="toc-text">四、Blending （模型融合）</span></a></li></ol>
             </div>
         </div>
       </div>
@@ -401,7 +401,8 @@ sns.violinplot(x=&#39;Embarked&#39;, y=&#39;Fare&#39;, hue=&#39;Survived&#39;, d
 <pre><code class="python">def status(feature):
     print (&#39;Processing&#39;, feature, &#39;: ok&#39;)
 </code></pre>
-<h2 id="载入数据"><a href="#载入数据" class="headerlink" title="载入数据"></a>载入数据</h2><p>这里我直接把Targets取了出来，然后把训练集和测试集放在了一起</p>
+<p><strong>载入数据</strong></p>
+<p>这里我直接把Targets取了出来，然后把训练集和测试集放在了一起</p>
 <p>因为后面做数据处理训练集和测试集都要做，不如先合并了。</p>
 <pre><code class="python">def get_combined_data():
     train = pd.read_csv(&#39;train.csv&#39;)
@@ -634,13 +635,14 @@ for c in combined.iloc[891:][&#39;Cabin&#39;]:
 <pre><code class="python">combined = process_cabin()
 </code></pre>
 <pre><code>Processing cabin : ok
-</code></pre><h3 id="到目前这个数据集终于没有缺失的值了！"><a href="#到目前这个数据集终于没有缺失的值了！" class="headerlink" title="到目前这个数据集终于没有缺失的值了！"></a>到目前这个数据集终于没有缺失的值了！</h3><pre><code class="python">combined.head()
+</code></pre><p><strong>到目前这个数据集终于没有缺失的值了！</strong></p>
+<pre><code class="python">combined.head()
 </code></pre>
 <div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>Pclass</th><br>      <th>Sex</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Ticket</th><br>      <th>Fare</th><br>      <th>Title_Master</th><br>      <th>Title_Miss</th><br>      <th>Title_Mr</th><br>      <th>Title_Mrs</th><br>      <th>Title_Officer</th><br>      <th>Title_Royalty</th><br>      <th>Embarked_C</th><br>      <th>Embarked_Q</th><br>      <th>Embarked_S</th><br>      <th>Cabin_A</th><br>      <th>Cabin_B</th><br>      <th>Cabin_C</th><br>      <th>Cabin_D</th><br>      <th>Cabin_E</th><br>      <th>Cabin_F</th><br>      <th>Cabin_G</th><br>      <th>Cabin_T</th><br>      <th>Cabin_U</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>3</td><br>      <td>male</td><br>      <td>22.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>A/5 21171</td><br>      <td>7.2500</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>1</td><br>      <td>female</td><br>      <td>38.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>PC 17599</td><br>      <td>71.2833</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>3</td><br>      <td>female</td><br>      <td>26.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>STON/O2. 3101282</td><br>      <td>7.9250</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>1</td><br>      <td>female</td><br>      <td>35.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>113803</td><br>      <td>53.1000</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>3</td><br>      <td>male</td><br>      <td>35.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>373450</td><br>      <td>8.0500</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>    </tr><br>  </tbody><br></table><br></div>
 
 
 
-<h2 id="Sex的-处理"><a href="#Sex的-处理" class="headerlink" title="Sex的 处理"></a>Sex的 处理</h2><pre><code class="python">def process_sex():
+<h2 id="Sex的处理"><a href="#Sex的处理" class="headerlink" title="Sex的处理"></a>Sex的处理</h2><pre><code class="python">def process_sex():
     global combined
     combined[&#39;Sex&#39;] = combined[&#39;Sex&#39;].map({&#39;male&#39;:1, &#39;female&#39;:0})
     status(&#39;Sex&#39;)
@@ -813,7 +815,7 @@ print (test_reduced.shape)
 </code></pre>
 <pre><code>(418, 13)
 </code></pre><p>这里筛了13个（这个自己决定，我测试的话13个准确率比较高）</p>
-<h2 id="看一下不同模型的表现情况（逻辑回归，逻辑回归-交叉验证，随机森林，gboost）"><a href="#看一下不同模型的表现情况（逻辑回归，逻辑回归-交叉验证，随机森林，gboost）" class="headerlink" title="看一下不同模型的表现情况（逻辑回归，逻辑回归_交叉验证，随机森林，gboost）"></a>看一下不同模型的表现情况（逻辑回归，逻辑回归_交叉验证，随机森林，gboost）</h2><pre><code class="python">logreg = LogisticRegression()
+<h2 id="看一下不同模型的表现"><a href="#看一下不同模型的表现" class="headerlink" title="看一下不同模型的表现"></a>看一下不同模型的表现</h2><pre><code class="python">logreg = LogisticRegression()
 logreg_cv = LogisticRegressionCV()
 rf = RandomForestClassifier()
 gboost = GradientBoostingClassifier()
@@ -875,7 +877,8 @@ else:
     model = RandomForestClassifier(**parameters)
     model.fit(train, targets)
 </code></pre>
-<h3 id="可以用模型进行预测然后上传啦！"><a href="#可以用模型进行预测然后上传啦！" class="headerlink" title="可以用模型进行预测然后上传啦！"></a>可以用模型进行预测然后上传啦！</h3><pre><code class="python">output = model.predict(test).astype(int)
+<p><strong>可以用模型进行预测然后上传啦！</strong></p>
+<pre><code class="python">output = model.predict(test).astype(int)
 df_output = pd.DataFrame()
 aux = pd.read_csv(&#39;test.csv&#39;)
 df_output[&#39;PassengerId&#39;] = aux[&#39;PassengerId&#39;]
@@ -901,8 +904,9 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
 </code></pre>
 <pre><code class="python">predictions_df.to_csv(&#39;blending_base_models.csv&#39;, index=False)
 </code></pre>
-<h3 id="但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。"><a href="#但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。" class="headerlink" title="但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。"></a>但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。</h3><p>融合前0.79，融合后0.77（sad</p>
-<h3 id="目前先做到这，有想法在持续跟近。"><a href="#目前先做到这，有想法在持续跟近。" class="headerlink" title="目前先做到这，有想法在持续跟近。"></a>目前先做到这，有想法在持续跟近。</h3>
+<p><strong>但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。</strong><br>融合前0.79，融合后0.77（sad</p>
+<p><strong>目前先做到这，有想法在持续跟近。</strong></p>
+
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
@@ -953,7 +957,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588231060540"></script>-->
+<!--<script src="/js/app.js?v=1588231591112"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
