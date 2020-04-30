@@ -36,14 +36,14 @@
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/output_135_1.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/images/article_1/8.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-30T07:41:18.406Z">
+<meta property="article:modified_time" content="2020-04-30T07:45:26.705Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-机器学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/output_21_0.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588232494704">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588232733481">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -278,7 +278,7 @@ plot.rcParams.update(params)
 <p>先简单的查看一下数据</p>
 <pre><code class="python">data.head()
 </code></pre>
-<details><br><summary>点击查看</summary><br><div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Name</th><br>      <th>Sex</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Ticket</th><br>      <th>Fare</th><br>      <th>Cabin</th><br>      <th>Embarked</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>1</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Braund, Mr. Owen Harris</td><br>      <td>male</td><br>      <td>22.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>A/5 21171</td><br>      <td>7.2500</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>2</td><br>      <td>1</td><br>      <td>1</td><br>      <td>Cumings, Mrs. John Bradley (Florence Briggs Th…</td><br>      <td>female</td><br>      <td>38.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>PC 17599</td><br>      <td>71.2833</td><br>      <td>C85</td><br>      <td>C</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>3</td><br>      <td>1</td><br>      <td>3</td><br>      <td>Heikkinen, Miss. Laina</td><br>      <td>female</td><br>      <td>26.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>STON/O2. 3101282</td><br>      <td>7.9250</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>4</td><br>      <td>1</td><br>      <td>1</td><br>      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td><br>      <td>female</td><br>      <td>35.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>113803</td><br>      <td>53.1000</td><br>      <td>C123</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>5</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Allen, Mr. William Henry</td><br>      <td>male</td><br>      <td>35.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>373450</td><br>      <td>8.0500</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>  </tbody><br></table><br></div><br></details>
+<details><br><summary>点击查看</summary><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Name</th><br>      <th>Sex</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Ticket</th><br>      <th>Fare</th><br>      <th>Cabin</th><br>      <th>Embarked</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>1</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Braund, Mr. Owen Harris</td><br>      <td>male</td><br>      <td>22.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>A/5 21171</td><br>      <td>7.2500</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>2</td><br>      <td>1</td><br>      <td>1</td><br>      <td>Cumings, Mrs. John Bradley (Florence Briggs Th…</td><br>      <td>female</td><br>      <td>38.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>PC 17599</td><br>      <td>71.2833</td><br>      <td>C85</td><br>      <td>C</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>3</td><br>      <td>1</td><br>      <td>3</td><br>      <td>Heikkinen, Miss. Laina</td><br>      <td>female</td><br>      <td>26.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>STON/O2. 3101282</td><br>      <td>7.9250</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>4</td><br>      <td>1</td><br>      <td>1</td><br>      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td><br>      <td>female</td><br>      <td>35.0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>113803</td><br>      <td>53.1000</td><br>      <td>C123</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>5</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Allen, Mr. William Henry</td><br>      <td>male</td><br>      <td>35.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>373450</td><br>      <td>8.0500</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>  </tbody><br></table><br></details>
 
 
 
@@ -915,7 +915,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588232494705"></script>-->
+<!--<script src="/js/app.js?v=1588232733482"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
