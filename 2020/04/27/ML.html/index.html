@@ -28,14 +28,14 @@
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/7.png">
 <meta property="og:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/8.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-30T08:48:57.621Z">
+<meta property="article:modified_time" content="2020-04-30T08:52:49.167Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-机器学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://supltz.github.io/2020/04/27/ML.html/article_1/1.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588236543133">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588236774865">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -192,7 +192,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Data-Insights"><span class="toc-number">1.</span> <span class="toc-text">一、Data Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-、Feature-engineering"><span class="toc-number">2.</span> <span class="toc-text">二  、Feature engineering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Name的处理"><span class="toc-number">2.1.</span> <span class="toc-text">Name的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fare的处理"><span class="toc-number">2.2.</span> <span class="toc-text">Fare的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Age的处理"><span class="toc-number">2.3.</span> <span class="toc-text">Age的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embarked的处理"><span class="toc-number">2.4.</span> <span class="toc-text">Embarked的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cabin的处理"><span class="toc-number">2.5.</span> <span class="toc-text">Cabin的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Modeling"><span class="toc-number">3.</span> <span class="toc-text">三、Modeling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature的选择"><span class="toc-number">3.1.</span> <span class="toc-text">Feature的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#看一下不同模型的表现"><span class="toc-number">3.2.</span> <span class="toc-text">看一下不同模型的表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调参"><span class="toc-number">3.3.</span> <span class="toc-text">调参</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Blending-（模型融合）"><span class="toc-number">4.</span> <span class="toc-text">四、Blending （模型融合）</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Data-Insights"><span class="toc-number">1.</span> <span class="toc-text">一、Data Insights</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-、Feature-engineering"><span class="toc-number">2.</span> <span class="toc-text">二  、Feature engineering</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Name的处理"><span class="toc-number">2.1.</span> <span class="toc-text">Name的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fare的处理"><span class="toc-number">2.2.</span> <span class="toc-text">Fare的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Age的处理"><span class="toc-number">2.3.</span> <span class="toc-text">Age的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embarked的处理"><span class="toc-number">2.4.</span> <span class="toc-text">Embarked的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cabin的处理"><span class="toc-number">2.5.</span> <span class="toc-text">Cabin的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sex的处理"><span class="toc-number">2.6.</span> <span class="toc-text">Sex的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pclass的处理"><span class="toc-number">2.7.</span> <span class="toc-text">Pclass的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ticket的处理"><span class="toc-number">2.8.</span> <span class="toc-text">Ticket的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Family的处理"><span class="toc-number">2.9.</span> <span class="toc-text">Family的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Modeling"><span class="toc-number">3.</span> <span class="toc-text">三、Modeling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature的选择"><span class="toc-number">3.1.</span> <span class="toc-text">Feature的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#看一下不同模型的表现"><span class="toc-number">3.2.</span> <span class="toc-text">看一下不同模型的表现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调参"><span class="toc-number">3.3.</span> <span class="toc-text">调参</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Blending-（模型融合）"><span class="toc-number">4.</span> <span class="toc-text">四、Blending （模型融合）</span></a></li></ol>
             </div>
         </div>
       </div>
@@ -615,14 +615,20 @@ for c in combined.iloc[891:][&#39;Cabin&#39;]:
 </code></pre><p><strong>到目前这个数据集终于没有缺失的值了！</strong></p>
 <pre><code class="python">combined.head()
 </code></pre>
-<details><summary>点击查看</summary><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th><th>Pclass</th><th>Sex</th><th>Age</th><th>SibSp</th><th>Parch</th><th>Ticket</th><th>Fare</th><th>Title_Master</th><th>Title_Miss</th><th>Title_Mr</th><th>Title_Mrs</th><th>Title_Officer</th><th>Title_Royalty</th><th>Embarked_C</th><th>Embarked_Q</th><th>Embarked_S</th><th>Cabin_A</th><th>Cabin_B</th><th>Cabin_C</th><th>Cabin_D</th><th>Cabin_E</th><th>Cabin_F</th><th>Cabin_G</th><th>Cabin_T</th><th>Cabin_U</th></tr></thead><tbody><tr><th>0</th><td>3</td><td>male</td><td>22.0</td><td>1</td><td>0</td><td>A/5 21171</td><td>7.2500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>1</th><td>1</td><td>female</td><td>38.0</td><td>1</td><td>0</td><td>PC 17599</td><td>71.2833</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>2</th><td>3</td><td>female</td><td>26.0</td><td>0</td><td>0</td><td>STON/O2. 3101282</td><td>7.9250</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>3</th><td>1</td><td>female</td><td>35.0</td><td>1</td><td>0</td><td>113803</td><td>53.1000</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>4</th><td>3</td><td>male</td><td>35.0</td><td>0</td><td>0</td><td>373450</td><td>8.0500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div><details><br><br><br>## Sex的处理<br><br><br><code>python
-def process_sex():
+<details><summary>点击查看</summary><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th><th>Pclass</th><th>Sex</th><th>Age</th><th>SibSp</th><th>Parch</th><th>Ticket</th><th>Fare</th><th>Title_Master</th><th>Title_Miss</th><th>Title_Mr</th><th>Title_Mrs</th><th>Title_Officer</th><th>Title_Royalty</th><th>Embarked_C</th><th>Embarked_Q</th><th>Embarked_S</th><th>Cabin_A</th><th>Cabin_B</th><th>Cabin_C</th><th>Cabin_D</th><th>Cabin_E</th><th>Cabin_F</th><th>Cabin_G</th><th>Cabin_T</th><th>Cabin_U</th></tr></thead><tbody><tr><th>0</th><td>3</td><td>male</td><td>22.0</td><td>1</td><td>0</td><td>A/5 21171</td><td>7.2500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>1</th><td>1</td><td>female</td><td>38.0</td><td>1</td><td>0</td><td>PC 17599</td><td>71.2833</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>2</th><td>3</td><td>female</td><td>26.0</td><td>0</td><td>0</td><td>STON/O2. 3101282</td><td>7.9250</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><th>3</th><td>1</td><td>female</td><td>35.0</td><td>1</td><td>0</td><td>113803</td><td>53.1000</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>4</th><td>3</td><td>male</td><td>35.0</td><td>0</td><td>0</td><td>373450</td><td>8.0500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div></details>
+
+
+<h2 id="Sex的处理"><a href="#Sex的处理" class="headerlink" title="Sex的处理"></a>Sex的处理</h2><pre><code class="python">def process_sex():
     global combined
     combined[&#39;Sex&#39;] = combined[&#39;Sex&#39;].map({&#39;male&#39;:1, &#39;female&#39;:0})
     status(&#39;Sex&#39;)
-    return combined</code><br><br>用0，1表示性别。。。。<br><br><br><code>python
-combined = process_sex()</code><br><br>    Processing Sex : ok<br><br><br>## Pclass的处理<br><br><br><code>python
-def process_pclass():
+    return combined
+</code></pre>
+<p>用0，1表示性别。。。。</p>
+<pre><code class="python">combined = process_sex()
+</code></pre>
+<pre><code>Processing Sex : ok
+</code></pre><h2 id="Pclass的处理"><a href="#Pclass的处理" class="headerlink" title="Pclass的处理"></a>Pclass的处理</h2><pre><code class="python">def process_pclass():
 
     global combined
     pclass_dummies = pd.get_dummies(combined[&#39;Pclass&#39;], prefix=&quot;Pclass&quot;)
@@ -632,9 +638,14 @@ def process_pclass():
     combined.drop(&#39;Pclass&#39;,axis=1,inplace=True)
 
     status(&#39;Pclass&#39;)
-    return combined</code><br><br>还是做one_hot 编码<br><br><br><code>python
-combined = process_pclass()</code><br><br>    Processing Pclass : ok<br><br><br>## Ticket的处理<br><br>取出票名的前缀<br><br><br><code>python
-def cleanTicket(ticket):
+    return combined
+</code></pre>
+<p>还是做one_hot 编码</p>
+<pre><code class="python">combined = process_pclass()
+</code></pre>
+<pre><code>Processing Pclass : ok
+</code></pre><h2 id="Ticket的处理"><a href="#Ticket的处理" class="headerlink" title="Ticket的处理"></a>Ticket的处理</h2><p>取出票名的前缀</p>
+<pre><code class="python">def cleanTicket(ticket):
     ticket = ticket.replace(&#39;.&#39;, &#39;&#39;)
     ticket = ticket.replace(&#39;/&#39;, &#39;&#39;)
     ticket = ticket.split()
@@ -643,12 +654,16 @@ def cleanTicket(ticket):
     if len(ticket) &gt; 0:
         return ticket[0]
     else:
-        return &#39;XXX&#39;</code><br><br><br><code>python
-tickets = set()
+        return &#39;XXX&#39;
+</code></pre>
+<pre><code class="python">tickets = set()
 for t in combined[&#39;Ticket&#39;]:
-    tickets.add(cleanTicket(t))</code><br><br><br><code>python
-print (len(tickets))</code><br><br>    37<br><br><br><br><code>python
-def process_ticket():
+    tickets.add(cleanTicket(t))
+</code></pre>
+<pre><code class="python">print (len(tickets))
+</code></pre>
+<pre><code>37
+</code></pre><pre><code class="python">def process_ticket():
 
     global combined
 
@@ -672,9 +687,15 @@ def process_ticket():
     combined.drop(&#39;Ticket&#39;, inplace=True, axis=1)
 
     status(&#39;Ticket&#39;)
-    return combined</code><br><br><br><code>python
-combined = process_ticket()</code><br><br>    Processing Ticket : ok<br><br><br>## Family的处理<br><br>这里根据家庭的大小来分类<br><br>这是非常合理的<br><br>大家庭聚在一起，因此与独自旅行的人相比，他们更有可能得到救助。<br><br><br><code>python
-def process_family():
+    return combined
+</code></pre>
+<pre><code class="python">combined = process_ticket()
+</code></pre>
+<pre><code>Processing Ticket : ok
+</code></pre><h2 id="Family的处理"><a href="#Family的处理" class="headerlink" title="Family的处理"></a>Family的处理</h2><p>这里根据家庭的大小来分类</p>
+<p>这是非常合理的</p>
+<p>大家庭聚在一起，因此与独自旅行的人相比，他们更有可能得到救助。</p>
+<pre><code class="python">def process_family():
 
     global combined
     combined[&#39;FamilySize&#39;] = combined[&#39;Parch&#39;] + combined[&#39;SibSp&#39;] + 1
@@ -684,10 +705,25 @@ def process_family():
     combined[&#39;LargeFamily&#39;] = combined[&#39;FamilySize&#39;].map(lambda s: 1 if 5 &lt;= s else 0)
 
     status(&#39;family&#39;)
-    return combined</code><br><br>创建了4个新的特征：<br><br>- FamilySize : 家庭大小<br>- Sigleton : 是不是独自一人<br>- SmallFamily : 小家庭 2 &lt;= size &lt;= 4<br>- LargeFamily : 大家庭5 &lt; size<br><br><br><code>python
-combined = process_family()</code><br><br>    Processing family : ok<br><br><br><br><code>python
-print (combined.shape)</code><br><br>    (1309, 67)<br><br><br>这样总共搞出来67列。。。。这也太多了<br><br><br><code>python
-combined.head()</code><br><details><summary>点击查看</summary><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th><th>Sex</th><th>Age</th><th>SibSp</th><th>Parch</th><th>Fare</th><th>Title_Master</th><th>Title_Miss</th><th>Title_Mr</th><th>Title_Mrs</th><th>Title_Officer</th><th>Title_Royalty</th><th>Embarked_C</th><th>Embarked_Q</th><th>Embarked_S</th><th>Cabin_A</th><th>Cabin_B</th><th>Cabin_C</th><th>Cabin_D</th><th>Cabin_E</th><th>Cabin_F</th><th>Cabin_G</th><th>Cabin_T</th><th>Cabin_U</th><th>Pclass_1</th><th>Pclass_2</th><th>Pclass_3</th><th>Ticket_A</th><th>Ticket_A4</th><th>Ticket_A5</th><th>Ticket_AQ3</th><th>Ticket_AQ4</th><th>Ticket_AS</th><th>Ticket_C</th><th>Ticket_CA</th><th>Ticket_CASOTON</th><th>Ticket_FC</th><th>Ticket_FCC</th><th>Ticket_Fa</th><th>Ticket_LINE</th><th>Ticket_LP</th><th>Ticket_PC</th><th>Ticket_PP</th><th>Ticket_PPP</th><th>Ticket_SC</th><th>Ticket_SCA3</th><th>Ticket_SCA4</th><th>Ticket_SCAH</th><th>Ticket_SCOW</th><th>Ticket_SCPARIS</th><th>Ticket_SCParis</th><th>Ticket_SOC</th><th>Ticket_SOP</th><th>Ticket_SOPP</th><th>Ticket_SOTONO2</th><th>Ticket_SOTONOQ</th><th>Ticket_SP</th><th>Ticket_STONO</th><th>Ticket_STONO2</th><th>Ticket_STONOQ</th><th>Ticket_SWPP</th><th>Ticket_WC</th><th>Ticket_WEP</th><th>Ticket_XXX</th><th>FamilySize</th><th>Singleton</th><th>SmallFamily</th><th>LargeFamily</th></tr></thead><tbody><tr><th>0</th><td>1</td><td>22.0</td><td>1</td><td>0</td><td>7.2500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>1</th><td>0</td><td>38.0</td><td>1</td><td>0</td><td>71.2833</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>2</th><td>0</td><td>26.0</td><td>0</td><td>0</td><td>7.9250</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><th>3</th><td>0</td><td>35.0</td><td>1</td><td>0</td><td>53.1000</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>4</th><td>1</td><td>35.0</td><td>0</td><td>0</td><td>8.0500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></tbody></table></div></details>
+    return combined
+</code></pre>
+<p>创建了4个新的特征：</p>
+<ul>
+<li>FamilySize : 家庭大小</li>
+<li>Sigleton : 是不是独自一人</li>
+<li>SmallFamily : 小家庭 2 &lt;= size &lt;= 4</li>
+<li>LargeFamily : 大家庭5 &lt; size</li>
+</ul>
+<pre><code class="python">combined = process_family()
+</code></pre>
+<pre><code>Processing family : ok
+</code></pre><pre><code class="python">print (combined.shape)
+</code></pre>
+<pre><code>(1309, 67)
+</code></pre><p>这样总共搞出来67列。。。。这也太多了</p>
+<pre><code class="python">combined.head()
+</code></pre>
+<details><summary>点击查看</summary><div><style scoped>    .dataframe tbody tr th:only-of-type {        vertical-align: middle;    }    .dataframe tbody tr th {        vertical-align: top;    }    .dataframe thead th {        text-align: right;    }</style><table border="1" class="dataframe"><thead><tr style="text-align: right;"><th></th><th>Sex</th><th>Age</th><th>SibSp</th><th>Parch</th><th>Fare</th><th>Title_Master</th><th>Title_Miss</th><th>Title_Mr</th><th>Title_Mrs</th><th>Title_Officer</th><th>Title_Royalty</th><th>Embarked_C</th><th>Embarked_Q</th><th>Embarked_S</th><th>Cabin_A</th><th>Cabin_B</th><th>Cabin_C</th><th>Cabin_D</th><th>Cabin_E</th><th>Cabin_F</th><th>Cabin_G</th><th>Cabin_T</th><th>Cabin_U</th><th>Pclass_1</th><th>Pclass_2</th><th>Pclass_3</th><th>Ticket_A</th><th>Ticket_A4</th><th>Ticket_A5</th><th>Ticket_AQ3</th><th>Ticket_AQ4</th><th>Ticket_AS</th><th>Ticket_C</th><th>Ticket_CA</th><th>Ticket_CASOTON</th><th>Ticket_FC</th><th>Ticket_FCC</th><th>Ticket_Fa</th><th>Ticket_LINE</th><th>Ticket_LP</th><th>Ticket_PC</th><th>Ticket_PP</th><th>Ticket_PPP</th><th>Ticket_SC</th><th>Ticket_SCA3</th><th>Ticket_SCA4</th><th>Ticket_SCAH</th><th>Ticket_SCOW</th><th>Ticket_SCPARIS</th><th>Ticket_SCParis</th><th>Ticket_SOC</th><th>Ticket_SOP</th><th>Ticket_SOPP</th><th>Ticket_SOTONO2</th><th>Ticket_SOTONOQ</th><th>Ticket_SP</th><th>Ticket_STONO</th><th>Ticket_STONO2</th><th>Ticket_STONOQ</th><th>Ticket_SWPP</th><th>Ticket_WC</th><th>Ticket_WEP</th><th>Ticket_XXX</th><th>FamilySize</th><th>Singleton</th><th>SmallFamily</th><th>LargeFamily</th></tr></thead><tbody><tr><th>0</th><td>1</td><td>22.0</td><td>1</td><td>0</td><td>7.2500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>1</th><td>0</td><td>38.0</td><td>1</td><td>0</td><td>71.2833</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>2</th><td>0</td><td>26.0</td><td>0</td><td>0</td><td>7.9250</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><th>3</th><td>0</td><td>35.0</td><td>1</td><td>0</td><td>53.1000</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>1</td><td>0</td></tr><tr><th>4</th><td>1</td><td>35.0</td><td>0</td><td>0</td><td>8.0500</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></tbody></table></div></details>
 
 
 <h1 id="三、Modeling"><a href="#三、Modeling" class="headerlink" title="三、Modeling"></a>三、Modeling</h1><p>终于来到建模啦</p>
@@ -844,7 +880,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
 </code></pre>
 <p><strong>但是模型融合的准确率并不是很高，可能别的模型没有仔细的调参。</strong><br>融合前0.79，融合后0.77（sad</p>
 <p><strong>目前先做到这，有想法在持续跟近。</strong></p>
-</details></details>
+
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
@@ -895,7 +931,7 @@ predictions_df.columns = [&#39;PassengerId&#39;, &#39;Survived&#39;]
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588236543135"></script>-->
+<!--<script src="/js/app.js?v=1588236774866"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
