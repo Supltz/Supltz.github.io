@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>Thoughts - Supltz</title>
+  <title>Python基础 - Supltz</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,21 +12,21 @@
   
 
   <link rel="shortcut icon" href="/images/icon.png" type="image/png" />
-  <meta name="description" content="就把它当作发牢骚的地方吧！">
+  <meta name="description" content="就是最近用python总结得一些坑和经验啦（其实基础还是有点不扎实，还需要买本书啃一啃">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Thoughts">
-<meta property="og:url" content="http://supltz.github.io/2020/04/27/Thoughts_1.html/index.html">
+<meta property="og:title" content="Python基础">
+<meta property="og:url" content="http://supltz.github.io/2020/04/27/python.html/index.html">
 <meta property="og:site_name" content="Supltz">
-<meta property="og:description" content="就把它当作发牢骚的地方吧！">
+<meta property="og:description" content="就是最近用python总结得一些坑和经验啦（其实基础还是有点不扎实，还需要买本书啃一啃">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-05-01T16:21:57.781Z">
+<meta property="article:modified_time" content="2020-05-10T15:22:55.296Z">
 <meta property="article:author" content="Supltz">
-<meta property="article:tag" content="-感悟">
+<meta property="article:tag" content="-python">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1589124194815">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1589124194855">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -167,15 +167,15 @@
         <div class="nexmoe-post">
   
       <div class="nexmoe-post-cover" style="padding-bottom: 55.55555555555556%;"> 
-          <img data-src="/images/life.jpg" data-sizes="auto" alt="Thoughts" class="lazyload">
-          <h1>Thoughts</h1>
+          <img data-src="/images/python.jpg" data-sizes="auto" alt="Python基础" class="lazyload">
+          <h1>Python基础</h1>
       </div>
   
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月27日</a>
-    <a><i class="nexmoefont icon-areachart"></i>876 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>314 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -183,7 +183,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#最近用python写作业遇到的一些小坑"><span class="toc-number">1.</span> <span class="toc-text">最近用python写作业遇到的一些小坑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pip-安装卡顿（time-out问题）"><span class="toc-number">1.1.</span> <span class="toc-text">1.pip 安装卡顿（time out问题）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python中的切片"><span class="toc-number">1.2.</span> <span class="toc-text">python中的切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opencv读图片的问题"><span class="toc-number">1.3.</span> <span class="toc-text">opencv读图片的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python读文件夹的问题"><span class="toc-number">1.4.</span> <span class="toc-text">python读文件夹的问题</span></a></li></ol></li></ol>
             </div>
         </div>
       </div>
@@ -191,33 +191,41 @@
   </div>
 
   <article>
-    <p>就把它当作发牢骚的地方吧！<br><a id="more"></a></p>
-<pre><code class="bash">说说明日方舟，炉石传说这类抽卡类的游戏吧！（两个都玩过但是都弃坑了）
+    <p>就是最近用python总结得一些坑和经验啦（其实基础还是有点不扎实，还需要买本书啃一啃<br><a id="more"></a></p>
+<h2 id="最近用python写作业遇到的一些小坑"><a href="#最近用python写作业遇到的一些小坑" class="headerlink" title="最近用python写作业遇到的一些小坑"></a>最近用python写作业遇到的一些小坑</h2><h3 id="1-pip-安装卡顿（time-out问题）"><a href="#1-pip-安装卡顿（time-out问题）" class="headerlink" title="1.pip 安装卡顿（time out问题）"></a>1.pip 安装卡顿（time out问题）</h3><pre><code class="python">pip install -i https://pypi.douban.com/simple （package）
+      #使用豆瓣的镜像
+pip install --index-url https://pypi.tuna.tsinghua.edu.cn/simple –upgrade （package）
+      #使用清华大学的镜像
 </code></pre>
-<p>就根据氪金来说，在我玩过的游戏里大概分为3类：</p>
-<ol>
-<li>下载游戏可能要付钱，但是游戏内氪金不会太影响游戏体验的（并不会直接影响到你的游戏实力）。比如LOL，PUBG，单机游戏，独立游戏这一类的。</li>
-<li>游戏内氪金就能获得确切的游戏体验的。比如DNF之类的。（穷，没玩过太多这类游戏）</li>
-<li>游戏内氪金不能明确增加游戏实力，但是能增加概率的。比如上述的抽卡类游戏。</li>
-</ol>
-<p>相信大家都不怎么喜欢第二类游戏，当你技术比对面高，等级也差不多，但是对面氪金的装备比你好，决斗场里你一顿操作打别人一半天，别人反手一招你就GG了。心里真是（Wdnmd）氪金玩家。</p>
-<p>在现实生活已经体验过被“氪金玩家”虐了，为何在目的为娱乐的游戏里还要受这种苦呢？（DNF富豪请自行离开）</p>
-<p>毕竟大多数人都讨厌这种氪金就能碾压，极度破坏游戏平衡的感觉，但是游戏公司也要恰饭的呀，不能可只靠流量赚钱，所以抽卡类游戏就诞生了，他淡化了从氪金到“成功”这一绝对关系。这样子就从<strong>穷玩家</strong>—&gt;<strong>氪金玩家</strong>变成了，<strong>穷玩家，非酋</strong>—&gt;<strong>氪金玩家，欧皇</strong>，表面上看起来挺好的，氪金也不一定能比得过“欧皇”，但是其实，实质上这个游戏的上限并没有改变，因为在氪金能增加概率的情况下，只要你氪金够多，你就能超越欧皇站在这个游戏的顶端！</p>
-<p>所以不如把第三类游戏和第二类游戏归为一类，你会发现他两加起来玩家的人数都不比第一类的任何一个游戏玩家的人数多，毕竟大家玩游戏只是为了娱乐，玩家与玩家之间应该通过技术来进行对比和比拼，而不是通过金钱。</p>
-<p>我既不想在这类游戏里被氪金玩家所嘲讽碾压（除非你是超级欧皇），我的价值观也一直觉得往游戏里充值是虚无的是空虚的优越感，所以第二类第三类的游戏我都弃游了，游戏本身也许是好游戏，只是这个奖励机制实在令人诟病罢了。</p>
-<p><strong>还是建议大家去玩第一类游戏吧！</strong></p>
-<p>因为对我来讲，游戏最多还是一种社交工具的存在，最好是要第一类中的多人在线组队类的，比如LOL和PUBG等。你在娱乐的同时，也与朋友同学增进了感情（技术好说不定还受人钦佩，何乐而不为呢？）</p>
-<p>我是觉得人总是要和别人交流的，虽然独立游戏，单机游戏制作精良（实际上这两类才是顶级游戏），但缺少了人与人的交流。不过这个还是看个人价值观啦（有很多独立音乐人虽然没流行音乐人混的好，不也很受人敬佩的不是吗？）</p>
-<p>这里讨论到了流行与独立。。。。。。（<em>未完待续</em>）</p>
+<h3 id="python中的切片"><a href="#python中的切片" class="headerlink" title="python中的切片"></a>python中的切片</h3><pre><code class="python">[a:b:c]
+# a是索引起点，b是终点，c是步长    ！！！重点python的切片都是左闭右开的[a:b)
+</code></pre>
+<h3 id="opencv读图片的问题"><a href="#opencv读图片的问题" class="headerlink" title="opencv读图片的问题"></a>opencv读图片的问题</h3><pre><code class="python">#中文目录的话用imread方法会出现问题。
+#解决方案：
+def readimg(filename, mode):
+    raw_data = np.fromfile(filename, dtype=np.uint8)  #先用numpy把图片文件存入内存：raw_data，把图片数据看做是纯字节数据
+    img = cv2.imdecode(raw_data, mode)  #从内存数据读入图片，mode可以是cv2.IMREAD_COLOR（表示彩色图片，读进来三个通道）
+    return img
+#opencv读进来的是[宽,高,通道数]
+
+</code></pre>
+<h3 id="python读文件夹的问题"><a href="#python读文件夹的问题" class="headerlink" title="python读文件夹的问题"></a>python读文件夹的问题</h3><pre><code class="python">for filename in os.listdir(directory):
+#   code here
+#   code here
+
+
+#这里的filename列表不一定和你文件夹里的文件顺序一样（可以改命名转为int来进行排序）
+</code></pre>
+<p><em>以后遇到python相关的问题还会在这里持续更新的！</em></p>
 
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%9D%82%E8%B0%88/">-杂谈</a>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%8A%80%E6%9C%AF/">-技术</a>
     
     
-        <a class="nexmoefont icon-tag-fill -link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">-感悟</a>
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/python/" rel="tag">-python</a>
     
 </div>
 
@@ -226,7 +234,7 @@
       
   <div class="nexmoe-post-copyright">
     <strong>Author：</strong>Supltz<br>
-    <strong>Link：</strong><a href="http://supltz.github.io/2020/04/27/Thoughts_1.html/" title="http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;04&#x2F;27&#x2F;Thoughts_1.html&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;04&#x2F;27&#x2F;Thoughts_1.html&#x2F;</a><br>
+    <strong>Link：</strong><a href="http://supltz.github.io/2020/04/27/python.html/" title="http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;04&#x2F;27&#x2F;python.html&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;04&#x2F;27&#x2F;python.html&#x2F;</a><br>
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
@@ -239,8 +247,8 @@
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://supltz.github.io/2020/04/27/Thoughts_1.html/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://supltz.github.io/2020/04/27/Thoughts_1.html/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://supltz.github.io/2020/04/27/python.html/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://supltz.github.io/2020/04/27/python.html/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script id="disqus-thread-script">
@@ -260,7 +268,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1589124194816"></script>-->
+<!--<script src="/js/app.js?v=1589124194856"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
