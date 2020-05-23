@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>Archive - Supltz</title>
+  <title>Linux基础 - Supltz</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,21 @@
   
 
   <link rel="shortcut icon" href="/images/icon.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Supltz">
-<meta property="og:url" content="http://supltz.github.io/archives/index.html">
+  <meta name="description" content="有时间还得系统得学一学linux。。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基础">
+<meta property="og:url" content="http://supltz.github.io/2020/05/23/linux.html/index.html">
 <meta property="og:site_name" content="Supltz">
+<meta property="og:description" content="有时间还得系统得学一学linux。。。。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-23T14:20:30.000Z">
+<meta property="article:modified_time" content="2020-05-23T14:59:06.806Z">
 <meta property="article:author" content="Supltz">
+<meta property="article:tag" content="-linux">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590246002839">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590246002872">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -159,83 +164,117 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        
-<section class="nexmoe-archives">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 55.55555555555556%;"> 
+          <img data-src="/images/linux.jpg" data-sizes="auto" alt="Linux基础" class="lazyload">
+          <h1>Linux基础</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月23日</a>
+    <a><i class="nexmoefont icon-areachart"></i>456 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
 
-    <article>
-        
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#最近向虚拟机中传文件时遇到得几个坑"><span class="toc-number">1.</span> <span class="toc-text">最近向虚拟机中传文件时遇到得几个坑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现共享文件夹的步骤"><span class="toc-number">1.1.</span> <span class="toc-text">实现共享文件夹的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些常用的linux命令"><span class="toc-number">1.2.</span> <span class="toc-text">一些常用的linux命令</span></a></li></ol></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
 
-        
-            <h2>2020</h2>
-            <ul>
-            
-                <li><span>05-23</span><a href="/2020/05/23/linux.html/" >Linux基础</a></li>
-            
-                <li><span>04-27</span><a href="/2020/04/27/ML.html/" >机器学习Kaggle实战</a></li>
-            
-                <li><span>04-27</span><a href="/2020/04/27/huawei.html/" >初试华为云Model Arts</a></li>
-            
-                <li><span>04-27</span><a href="/2020/04/27/Thoughts_1.html/" >Thoughts</a></li>
-            
-                <li><span>04-27</span><a href="/2020/04/27/Android.html/" >Android 开发入门</a></li>
-            
-                <li><span>04-27</span><a href="/2020/04/27/python.html/" >Python基础</a></li>
-            
-            </ul>
-        
-    </article>
+  <article>
+    <p>有时间还得系统得学一学linux。。。。<br><a id="more"></a></p>
+<h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><pre><code class="bash">1. 安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。
+命令： sudo apt-get install open-vm-tools
+
+2.然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）
+
+3.共享过来的文件夹在虚拟机的/mnt/hgfs路径下。
+问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。
+首先进入root权限：  sudo su
+然后cd进mnt里：  cd /mnt
+自己创建一个文件夹： mkdir hgfs
+(创建了之后还是空的啥都没有)
+这时候先执行：sudo vmware-hgfsclient  会返回你要共享的那个文件夹（说明共享文件夹创建成功）
+然后执行：mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)
+如果没用报错就成功了，如果报错了，就执行：vmhgfs-fuse .host:/ /mnt/hgfs
+
+这时候/mnt/hgfs路径下应该有那个共享文件夹了！
+
+还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：
+命令 cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/
+
+root权限下的/home和普通用户下的/home是不一样的！！！！
+即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test
+
+
+
+</code></pre>
+<h3 id="一些常用的linux命令"><a href="#一些常用的linux命令" class="headerlink" title="一些常用的linux命令"></a>一些常用的linux命令</h3><pre><code class="bash">chown -R 用户名 路径    ----修改文件夹权限
+gedit /etc/profile     ----文本编辑器（以环境变量为例）
+source /etc/profile    ----立即执行修改
+tar zxvf 文件名         ----解压文件
+</code></pre>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%8A%80%E6%9C%AF/">-技术</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/linux/" rel="tag">-linux</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Supltz<br>
+    <strong>Link：</strong><a href="http://supltz.github.io/2020/05/23/linux.html/" title="http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;05&#x2F;23&#x2F;linux.html&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;05&#x2F;23&#x2F;linux.html&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <script id="dsq-count-scr" src="https://https-supltz-github-io-2020-04-27-ml-html.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://supltz.github.io/2020/05/23/linux.html/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://supltz.github.io/2020/05/23/linux.html/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script id="disqus-thread-script">
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//https-supltz-github-io-2020-04-27-ml-html.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
 </section>
-
-<style>
-.nexmoe-archives article > *:first-child {
-    margin-top: 0;
-}
-.nexmoe-archives article > *:last-child {
-    margin-bottom: 0;
-}
-.nexmoe-archives ul {
-    list-style: none;
-    padding-left: 0!important;
-}
-.nexmoe-archives li {
-    position: relative;
-    padding: 10px 0;
-}
-.nexmoe-archives li::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: #ff4e6a;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -2px;
-    margin-right: 11px;
-    border-radius: 100%;
-    border: 3px solid #fff;
-    z-index: 100;
-    position: relative;
-}
-.nexmoe-archives li::after {
-    content: "";
-    height: 100%;
-    width: 2px;
-    background: rgba(255, 78, 106, 0.2);
-    position: absolute;
-    left: 6px;
-    top: 20px;
-}
-.nexmoe-archives li:last-child:after {
-    display: none;
-}
-.nexmoe-archives span {
-    margin-right: 15px;
-}
-</style>
+  </div>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590246002840"></script>-->
+<!--<script src="/js/app.js?v=1590246002873"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
