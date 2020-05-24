@@ -20,13 +20,13 @@
 <meta property="og:description" content="有时间还得系统得学一学linux。。。。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T14:20:30.000Z">
-<meta property="article:modified_time" content="2020-05-24T14:31:49.955Z">
+<meta property="article:modified_time" content="2020-05-24T15:21:53.528Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-linux">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590333561683">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590333729038">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -193,36 +193,32 @@
   <article>
     <p>有时间还得系统得学一学linux。。。。<br><a id="more"></a></p>
 <h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><ol>
-<li>安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。<br>命令：<pre><code class="bash">sudo apt-get install open-vm-tools
-</code></pre>
-</li>
-<li><p>然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）</p>
-</li>
-<li><p>共享过来的文件夹在虚拟机的/mnt/hgfs路径下。<br>问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。<br>首先进入root权限：</p>
-<pre><code class="bash">sudo su
-</code></pre>
-<p>然后cd进mnt里：</p>
-<pre><code class="bash">cd /mnt
-</code></pre>
-<p>自己创建一个文件夹：</p>
-<pre><code class="bash">mkdir hgfs
-</code></pre>
-<p>(创建了之后还是空的啥都没有)<br>这时候先执行：</p>
-<pre><code class="bash">sudo vmware-hgfsclient
-</code></pre>
-<p>会返回你要共享的那个文件夹（说明共享文件夹创建成功）<br>然后执行：</p>
-<pre><code class="bash">mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)
-</code></pre>
-<p>如果没用报错就成功了，如果报错了，就执行：</p>
-<pre><code class="bash">vmhgfs-fuse .host:/ /mnt/hgfs
-</code></pre>
-</li>
+<li>安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。<br>命令：</li>
 </ol>
-<p>这时候/mnt/hgfs路径下应该有那个共享文件夹了！</p>
-<p>还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：<br>命令:</p>
-<pre><code class="bash">cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/
+<pre><code class="bash">sudo apt-get install open-vm-tools
 </code></pre>
-<p>记：<br>root权限下的/home和普通用户下的/home是不一样的！！！！<br>即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test</p>
+<ol start="2">
+<li>然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）</li>
+</ol>
+<ol start="3">
+<li>共享过来的文件夹在虚拟机的/mnt/hgfs路径下。</li>
+</ol>
+<p>问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。<br>首先进入root权限：</p>
+<pre><code>sudo su
+</code></pre><p>然后cd进mnt里：</p>
+<pre><code>cd /mnt
+</code></pre><p>自己创建一个文件夹：</p>
+<pre><code>mkdir hgfs
+</code></pre><p>(创建了之后还是空的啥都没有)<br>这时候先执行：</p>
+<pre><code>sudo vmware-hgfsclient
+</code></pre><p>会返回你要共享的那个文件夹（说明共享文件夹创建成功）<br>然后执行：</p>
+<pre><code>mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)
+</code></pre><p>如果没用报错就成功了，如果报错了，就执行：</p>
+<pre><code>vmhgfs-fuse .host:/ /mnt/hgfs
+</code></pre><p>这时候/mnt/hgfs路径下应该有那个共享文件夹了！</p>
+<p>还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：<br>命令:</p>
+<pre><code>cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/
+</code></pre><p>记：<br>root权限下的/home和普通用户下的/home是不一样的！！！！<br>即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test</p>
 <h3 id="一些常用的linux命令"><a href="#一些常用的linux命令" class="headerlink" title="一些常用的linux命令"></a>一些常用的linux命令</h3><pre><code class="bash">chown -R 用户名 路径    ----修改文件夹权限
 gedit /etc/profile     ----文本编辑器（以环境变量为例）
 source /etc/profile    ----立即执行修改
@@ -279,7 +275,7 @@ tar zxvf 文件名         ----解压文件
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590333561685"></script>-->
+<!--<script src="/js/app.js?v=1590333729039"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
