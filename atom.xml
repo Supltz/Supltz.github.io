@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Supltz.github.io/"/>
-  <updated>2020-05-23T14:59:06.806Z</updated>
+  <updated>2020-05-24T15:18:43.981Z</updated>
   <id>http://Supltz.github.io/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java基础</title>
+    <link href="http://Supltz.github.io/2020/05/24/java.html/"/>
+    <id>http://Supltz.github.io/2020/05/24/java.html/</id>
+    <published>2020-05-24T14:26:30.000Z</published>
+    <updated>2020-05-24T15:18:43.981Z</updated>
+    
+    <content type="html"><![CDATA[<p>读java核心技术卷一的一些笔记。<br><a id="more"></a><br>这本书大概需要掌握的有600页吧。。还是蛮多的。</p><h2 id="1-75页"><a href="#1-75页" class="headerlink" title="1~75页"></a>1~75页</h2><p><em>这周花了3~4个小时快速过了75页，前面都是一些基础，很简单，但是还是有值得记录的一些地方把。</em></p><pre><code class="bash">java里没有头文件，指针运算，结构，联合，操作符重载，虚基类等。（其实这些我大多数也不知道是啥。。。）java与C++的主要不同点在于多重继承，在java中，取而代之的是更简单的接口的概念。java提供了跟丰富的自省功能（这一点将在第五章讨论）虚拟机有一个选项，可以将执行最频繁的字节码序列转换成机器码，这一过程称为即时编译。（这里涉及到编译型和解释型的概念）字符串采用标准的Unicode格式存储。字节码可以在运行时动态的转换成CPU机器码。C#和Java有很多相似之处javac 是编译器将.java编译成.class文件，java启动java虚拟机执行字节码。关键字public，private 叫做访问修饰符，控制访问级别的。java应用程序的全部内容都必须放置在类中。类名可以用骆驼命名法：CamelCasejava虚拟机总是从指定类中的main方法开始执行。main方法必须声明为public，必须是静态的。System.out.println()System.out.print()System.out.printf()    printf中可以使用%d,%s等替换变量java是一种强类型语言（对比弱类型语言python）java中没有无符号形式的int,byte和long,short类型。java中的舍入误差：2.0-1.1=0.899999999999当心注释中的\ujava中False不等于0，True不等于1java中并不区分声明和定义类常量定义在ain的外部用final定义常量&amp;&amp;和||按照短路方式来求值得，&amp;和|需要两个都满足，java支持三元操作符如：x&lt;y?x:yjava中得切片也是左闭右开的比较记得用.equals()方法，不要用==空和null的区别StringBuilder只能单线程，StringBuffer可以多线程Scanner input=new Scanner(System.in)   Scanner类在java.util.下，System.in和Scanner是两个关联的对象String in=input.nextLine()       获取控制台输入nextInt(),nextDouble()之类的Scanner in=new Scanner(Path.of(&quot;&quot;),Standard(Charsets.UTF_8))  读文件PrintWriter out=new PrintWriter(&quot;&quot;,Standard(Charsets.UTF_8))  写文件String dir=System.getProperty(&quot;user.dir&quot;)   获取工作目录java不允许嵌套的块作用域中重定义变量</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;读java核心技术卷一的一些笔记。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="-技术" scheme="http://Supltz.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="-java" scheme="http://Supltz.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux基础</title>
     <link href="http://Supltz.github.io/2020/05/23/linux.html/"/>
     <id>http://Supltz.github.io/2020/05/23/linux.html/</id>
     <published>2020-05-23T14:20:30.000Z</published>
-    <updated>2020-05-23T14:59:06.806Z</updated>
+    <updated>2020-05-24T14:31:49.955Z</updated>
     
-    <content type="html"><![CDATA[<p>有时间还得系统得学一学linux。。。。<br><a id="more"></a></p><h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><pre><code class="bash">1. 安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。命令： sudo apt-get install open-vm-tools2.然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）3.共享过来的文件夹在虚拟机的/mnt/hgfs路径下。问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。首先进入root权限：  sudo su然后cd进mnt里：  cd /mnt自己创建一个文件夹： mkdir hgfs(创建了之后还是空的啥都没有)这时候先执行：sudo vmware-hgfsclient  会返回你要共享的那个文件夹（说明共享文件夹创建成功）然后执行：mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)如果没用报错就成功了，如果报错了，就执行：vmhgfs-fuse .host:/ /mnt/hgfs这时候/mnt/hgfs路径下应该有那个共享文件夹了！还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：命令 cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/root权限下的/home和普通用户下的/home是不一样的！！！！即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test</code></pre><h3 id="一些常用的linux命令"><a href="#一些常用的linux命令" class="headerlink" title="一些常用的linux命令"></a>一些常用的linux命令</h3><pre><code class="bash">chown -R 用户名 路径    ----修改文件夹权限gedit /etc/profile     ----文本编辑器（以环境变量为例）source /etc/profile    ----立即执行修改tar zxvf 文件名         ----解压文件</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>有时间还得系统得学一学linux。。。。<br><a id="more"></a></p><h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><ol><li>安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。<br>命令：<pre><code class="bash">sudo apt-get install open-vm-tools</code></pre></li><li><p>然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）</p></li><li><p>共享过来的文件夹在虚拟机的/mnt/hgfs路径下。<br>问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。<br>首先进入root权限：</p><pre><code class="bash">sudo su</code></pre><p>然后cd进mnt里：</p><pre><code class="bash">cd /mnt</code></pre><p>自己创建一个文件夹：</p><pre><code class="bash">mkdir hgfs</code></pre><p>(创建了之后还是空的啥都没有)<br>这时候先执行：</p><pre><code class="bash">sudo vmware-hgfsclient</code></pre><p>会返回你要共享的那个文件夹（说明共享文件夹创建成功）<br>然后执行：</p><pre><code class="bash">mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)</code></pre><p>如果没用报错就成功了，如果报错了，就执行：</p><pre><code class="bash">vmhgfs-fuse .host:/ /mnt/hgfs</code></pre></li></ol><p>这时候/mnt/hgfs路径下应该有那个共享文件夹了！</p><p>还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：<br>命令:</p><pre><code class="bash">cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/</code></pre><p>记：<br>root权限下的/home和普通用户下的/home是不一样的！！！！<br>即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test</p><h3 id="一些常用的linux命令"><a href="#一些常用的linux命令" class="headerlink" title="一些常用的linux命令"></a>一些常用的linux命令</h3><pre><code class="bash">chown -R 用户名 路径    ----修改文件夹权限gedit /etc/profile     ----文本编辑器（以环境变量为例）source /etc/profile    ----立即执行修改tar zxvf 文件名         ----解压文件</code></pre>]]></content>
     
     <summary type="html">
     

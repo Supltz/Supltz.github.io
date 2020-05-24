@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>Archive：2020 - Supltz</title>
+  <title>java基础 - Supltz</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,16 +12,21 @@
   
 
   <link rel="shortcut icon" href="/images/icon.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Supltz">
-<meta property="og:url" content="http://supltz.github.io/archives/2020/index.html">
+  <meta name="description" content="读java核心技术卷一的一些笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://supltz.github.io/2020/05/24/java.html/index.html">
 <meta property="og:site_name" content="Supltz">
+<meta property="og:description" content="读java核心技术卷一的一些笔记。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-24T14:26:30.000Z">
+<meta property="article:modified_time" content="2020-05-24T15:18:43.981Z">
 <meta property="article:author" content="Supltz">
+<meta property="article:tag" content="-java">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590333561648">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590333561697">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -159,66 +164,152 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        
-<section class="nexmoe-archives">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 55.55555555555556%;"> 
+          <img data-src="/images/java.jpg" data-sizes="auto" alt="java基础" class="lazyload">
+          <h1>java基础</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>647 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
 
-    <article>
-        
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-75页"><span class="toc-number">1.</span> <span class="toc-text">1~75页</span></a></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
 
-        
-    </article>
+  <article>
+    <p>读java核心技术卷一的一些笔记。<br><a id="more"></a><br>这本书大概需要掌握的有600页吧。。还是蛮多的。</p>
+<h2 id="1-75页"><a href="#1-75页" class="headerlink" title="1~75页"></a>1~75页</h2><p><em>这周花了3~4个小时快速过了75页，前面都是一些基础，很简单，但是还是有值得记录的一些地方把。</em></p>
+<pre><code class="bash">java里没有头文件，指针运算，结构，联合，操作符重载，虚基类等。（其实这些我大多数也不知道是啥。。。）
+
+java与C++的主要不同点在于多重继承，在java中，取而代之的是更简单的接口的概念。java提供了跟丰富的自省功能（这一点将在第五章讨论）
+
+虚拟机有一个选项，可以将执行最频繁的字节码序列转换成机器码，这一过程称为即时编译。（这里涉及到编译型和解释型的概念）
+
+字符串采用标准的Unicode格式存储。
+
+字节码可以在运行时动态的转换成CPU机器码。
+
+C#和Java有很多相似之处
+
+javac 是编译器将.java编译成.class文件，java启动java虚拟机执行字节码。
+
+关键字public，private 叫做访问修饰符，控制访问级别的。
+
+java应用程序的全部内容都必须放置在类中。
+
+类名可以用骆驼命名法：CamelCase
+
+java虚拟机总是从指定类中的main方法开始执行。
+
+main方法必须声明为public，必须是静态的。
+
+System.out.println()
+System.out.print()
+System.out.printf()    printf中可以使用%d,%s等替换变量
+
+java是一种强类型语言（对比弱类型语言python）
+
+java中没有无符号形式的int,byte和long,short类型。
+
+java中的舍入误差：2.0-1.1=0.899999999999
+
+当心注释中的\u
+
+java中False不等于0，True不等于1
+
+java中并不区分声明和定义
+
+类常量定义在ain的外部
+
+用final定义常量
+
+&amp;&amp;和||按照短路方式来求值得，&amp;和|需要两个都满足，java支持三元操作符如：x&lt;y?x:y
+
+java中得切片也是左闭右开的
+
+比较记得用.equals()方法，不要用==
+
+空和null的区别
+
+StringBuilder只能单线程，StringBuffer可以多线程
+
+Scanner input=new Scanner(System.in)   Scanner类在java.util.下，System.in和Scanner是两个关联的对象
+String in=input.nextLine()       获取控制台输入nextInt(),nextDouble()之类的
+
+
+Scanner in=new Scanner(Path.of(&quot;&quot;),Standard(Charsets.UTF_8))  读文件
+PrintWriter out=new PrintWriter(&quot;&quot;,Standard(Charsets.UTF_8))  写文件
+String dir=System.getProperty(&quot;user.dir&quot;)   获取工作目录
+
+java不允许嵌套的块作用域中重定义变量
+
+</code></pre>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%8A%80%E6%9C%AF/">-技术</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/java/" rel="tag">-java</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Supltz<br>
+    <strong>Link：</strong><a href="http://supltz.github.io/2020/05/24/java.html/" title="http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;05&#x2F;24&#x2F;java.html&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;supltz.github.io&#x2F;2020&#x2F;05&#x2F;24&#x2F;java.html&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <script id="dsq-count-scr" src="https://https-supltz-github-io-2020-04-27-ml-html.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://supltz.github.io/2020/05/24/java.html/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://supltz.github.io/2020/05/24/java.html/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script id="disqus-thread-script">
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//https-supltz-github-io-2020-04-27-ml-html.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
 </section>
-
-<style>
-.nexmoe-archives article > *:first-child {
-    margin-top: 0;
-}
-.nexmoe-archives article > *:last-child {
-    margin-bottom: 0;
-}
-.nexmoe-archives ul {
-    list-style: none;
-    padding-left: 0!important;
-}
-.nexmoe-archives li {
-    position: relative;
-    padding: 10px 0;
-}
-.nexmoe-archives li::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: #ff4e6a;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -2px;
-    margin-right: 11px;
-    border-radius: 100%;
-    border: 3px solid #fff;
-    z-index: 100;
-    position: relative;
-}
-.nexmoe-archives li::after {
-    content: "";
-    height: 100%;
-    width: 2px;
-    background: rgba(255, 78, 106, 0.2);
-    position: absolute;
-    left: 6px;
-    top: 20px;
-}
-.nexmoe-archives li:last-child:after {
-    display: none;
-}
-.nexmoe-archives span {
-    margin-right: 15px;
-}
-</style>
+  </div>
+</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590333561649"></script>-->
+<!--<script src="/js/app.js?v=1590333561698"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>

@@ -20,13 +20,13 @@
 <meta property="og:description" content="有时间还得系统得学一学linux。。。。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T14:20:30.000Z">
-<meta property="article:modified_time" content="2020-05-23T14:59:06.806Z">
+<meta property="article:modified_time" content="2020-05-24T14:31:49.955Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-linux">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590246002872">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1590333561683">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -52,8 +52,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>Articles</span>6</div>
-        <div><span>Tags</span>6</div>
+        <div><span>Articles</span>7</div>
+        <div><span>Tags</span>7</div>
         <div><span>Categories</span>2</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -126,7 +126,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/技术/">-技术</a>
-          <span class="category-list-count">5</span>
+          <span class="category-list-count">6</span>
         </li>
 
         
@@ -148,7 +148,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">Tag Cloud</h3>
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/Android/" style="font-size: 10px;">-Android</a> <a href="/tags/linux/" style="font-size: 10px;">-linux</a> <a href="/tags/python/" style="font-size: 10px;">-python</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 10px;">-感悟</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">-机器学习</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">-机器学习 -深度学习</a>
+      <a href="/tags/Android/" style="font-size: 10px;">-Android</a> <a href="/tags/java/" style="font-size: 10px;">-java</a> <a href="/tags/linux/" style="font-size: 10px;">-linux</a> <a href="/tags/python/" style="font-size: 10px;">-python</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 10px;">-感悟</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">-机器学习</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">-机器学习 -深度学习</a>
     </div>
     
   </div>
@@ -174,7 +174,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月23日</a>
-    <a><i class="nexmoefont icon-areachart"></i>456 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>454 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -192,32 +192,37 @@
 
   <article>
     <p>有时间还得系统得学一学linux。。。。<br><a id="more"></a></p>
-<h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><pre><code class="bash">1. 安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。
-命令： sudo apt-get install open-vm-tools
-
-2.然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）
-
-3.共享过来的文件夹在虚拟机的/mnt/hgfs路径下。
-问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。
-首先进入root权限：  sudo su
-然后cd进mnt里：  cd /mnt
-自己创建一个文件夹： mkdir hgfs
-(创建了之后还是空的啥都没有)
-这时候先执行：sudo vmware-hgfsclient  会返回你要共享的那个文件夹（说明共享文件夹创建成功）
-然后执行：mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)
-如果没用报错就成功了，如果报错了，就执行：vmhgfs-fuse .host:/ /mnt/hgfs
-
-这时候/mnt/hgfs路径下应该有那个共享文件夹了！
-
-还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：
-命令 cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/
-
-root权限下的/home和普通用户下的/home是不一样的！！！！
-即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test
-
-
-
+<h2 id="最近向虚拟机中传文件时遇到得几个坑"><a href="#最近向虚拟机中传文件时遇到得几个坑" class="headerlink" title="最近向虚拟机中传文件时遇到得几个坑"></a>最近向虚拟机中传文件时遇到得几个坑</h2><h3 id="实现共享文件夹的步骤"><a href="#实现共享文件夹的步骤" class="headerlink" title="实现共享文件夹的步骤"></a>实现共享文件夹的步骤</h3><ol>
+<li>安装vmware-tools，虚拟机中必须要先安装vm-tools才能传文件。<br>命令：<pre><code class="bash">sudo apt-get install open-vm-tools
 </code></pre>
+</li>
+<li><p>然后在vmware虚拟机的设置中启动共享文件夹（这个网上教程都还挺完整的）</p>
+</li>
+<li><p>共享过来的文件夹在虚拟机的/mnt/hgfs路径下。<br>问题来了：这个路径只有root权限才可以访问，而且我的mnt下没有hgfs这个文件夹。<br>首先进入root权限：</p>
+<pre><code class="bash">sudo su
+</code></pre>
+<p>然后cd进mnt里：</p>
+<pre><code class="bash">cd /mnt
+</code></pre>
+<p>自己创建一个文件夹：</p>
+<pre><code class="bash">mkdir hgfs
+</code></pre>
+<p>(创建了之后还是空的啥都没有)<br>这时候先执行：</p>
+<pre><code class="bash">sudo vmware-hgfsclient
+</code></pre>
+<p>会返回你要共享的那个文件夹（说明共享文件夹创建成功）<br>然后执行：</p>
+<pre><code class="bash">mount -t vmhgfs .host:/ /mnt/hgfs (我这里报错：No such device)
+</code></pre>
+<p>如果没用报错就成功了，如果报错了，就执行：</p>
+<pre><code class="bash">vmhgfs-fuse .host:/ /mnt/hgfs
+</code></pre>
+</li>
+</ol>
+<p>这时候/mnt/hgfs路径下应该有那个共享文件夹了！</p>
+<p>还没结束，别忘了/mnt/hgfs这个路径只有root权限才能访问，不方便操作，最好把共享文件夹的内容复制到普通权限用户的文件夹来：<br>命令:</p>
+<pre><code class="bash">cp -R /mnt/hgfs/test(这个test是自己命名的)/* /home/supltz（自己的用户名）/test/
+</code></pre>
+<p>记：<br>root权限下的/home和普通用户下的/home是不一样的！！！！<br>即普通用户下的/home/test在root权限下是/home/supltz（自己的用户名）/test</p>
 <h3 id="一些常用的linux命令"><a href="#一些常用的linux命令" class="headerlink" title="一些常用的linux命令"></a>一些常用的linux命令</h3><pre><code class="bash">chown -R 用户名 路径    ----修改文件夹权限
 gedit /etc/profile     ----文本编辑器（以环境变量为例）
 source /etc/profile    ----立即执行修改
@@ -274,7 +279,7 @@ tar zxvf 文件名         ----解压文件
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590246002873"></script>-->
+<!--<script src="/js/app.js?v=1590333561685"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
