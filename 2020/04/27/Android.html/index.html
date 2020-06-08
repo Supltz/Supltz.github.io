@@ -19,14 +19,18 @@
 <meta property="og:site_name" content="Supltz">
 <meta property="og:description" content="Android入门">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://supltz.github.io/2020/04/27/Android.html/1.png">
+<meta property="og:image" content="http://supltz.github.io/2020/04/27/Android.html/2.png">
+<meta property="og:image" content="http://supltz.github.io/2020/04/27/Android.html/3.png">
 <meta property="article:published_time" content="2020-04-27T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-04-28T10:06:45.822Z">
+<meta property="article:modified_time" content="2020-06-08T00:36:05.624Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-Android">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://supltz.github.io/2020/04/27/Android.html/1.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1590334082925">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1591587588728">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -174,7 +178,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月27日</a>
-    <a><i class="nexmoefont icon-areachart"></i>40 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>237 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -183,7 +187,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快速开始"><span class="toc-number">1.</span> <span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#syncing失败解决"><span class="toc-number">1.</span> <span class="toc-text">syncing失败解决</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题一"><span class="toc-number">1.1.</span> <span class="toc-text">问题一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题二"><span class="toc-number">1.2.</span> <span class="toc-text">问题二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码版本问题"><span class="toc-number">2.</span> <span class="toc-text">代码版本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题一-1"><span class="toc-number">2.1.</span> <span class="toc-text">问题一</span></a></li></ol></li></ol>
             </div>
         </div>
       </div>
@@ -192,19 +196,27 @@
 
   <article>
     <p>Android入门<br><a id="more"></a></p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo newasdafasfsa
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="syncing失败解决"><a href="#syncing失败解决" class="headerlink" title="syncing失败解决"></a>syncing失败解决</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><p><img data-sizes="auto" data-src="/2020/04/27/Android.html/1.png" alt="report1" class="lazyload"></p>
+<pre><code>检查这几点：
+1. 在项目内的gradle.properties加一句
+   org.gradle.daemon=true
+2. AVD和SDK最好不要放在一个文件夹目录下
+3.进入C:\Users\ASUS\.gradle这个目录下创建一个gradle.properties文件（内容和项目里的相同）
+4.系统环境变量中ANDROID_SDK_HOME设置为AVD的路径，ANDROID_HOME设置为SDK的路径。
+</code></pre><h3 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h3><p><img data-sizes="auto" data-src="/2020/04/27/Android.html/2.png" alt="report2" class="lazyload"></p>
+<p>这个一般是网络的问题，关闭防火墙，重启再尝试，如果还不成功，检查以下设置：<br><img data-sizes="auto" data-src="/2020/04/27/Android.html/3.png" alt="report2" class="lazyload"><br><strong>其中Download external annotations for dependencies打上勾，重启再试</strong></p>
+<h2 id="代码版本问题"><a href="#代码版本问题" class="headerlink" title="代码版本问题"></a>代码版本问题</h2><h3 id="问题一-1"><a href="#问题一-1" class="headerlink" title="问题一"></a>问题一</h3><pre><code>应该用：import androidx.appcompat.app.AppCompatActivity;
+这一句代替原来的：import android.support.v7.app.AppCompatActivity;
 
+import androidx.annotation.Nullable;
+代替原来的：import android.support.annotation.Nullable;
+</code></pre><p>###问题二</p>
+<pre><code>编译不通过，但是删除之后又不影响额代码：
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+</code></pre>
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
@@ -255,7 +267,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1590334082926"></script>-->
+<!--<script src="/js/app.js?v=1591587588729"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>

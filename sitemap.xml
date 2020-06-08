@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://supltz.github.io/2020/04/27/Android.html/</loc>
+    
+    <lastmod>2020-06-08T00:36:05.624Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://supltz.github.io/2020/04/27/ML.html/</loc>
+    
+    <lastmod>2020-06-07T13:25:54.685Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://supltz.github.io/2020/05/23/linux.html/</loc>
     
     <lastmod>2020-05-24T15:27:32.133Z</lastmod>
@@ -30,23 +44,9 @@
   </url>
   
   <url>
-    <loc>http://supltz.github.io/2020/04/27/ML.html/</loc>
-    
-    <lastmod>2020-04-30T08:52:49.167Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://supltz.github.io/PY.html</loc>
     
     <lastmod>2020-04-28T10:17:00.166Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://supltz.github.io/2020/04/27/Android.html/</loc>
-    
-    <lastmod>2020-04-28T10:06:45.822Z</lastmod>
     
   </url>
   
