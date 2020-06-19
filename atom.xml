@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Supltz.github.io/"/>
-  <updated>2020-05-24T15:24:33.696Z</updated>
+  <updated>2020-06-19T16:28:10.379Z</updated>
   <id>http://Supltz.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SNN项目(SLAYER)在Windows10上的部署教程</title>
+    <link href="http://Supltz.github.io/2020/06/20/snn.html/"/>
+    <id>http://Supltz.github.io/2020/06/20/snn.html/</id>
+    <published>2020-06-20T13:47:45.000Z</published>
+    <updated>2020-06-19T16:28:10.379Z</updated>
+    
+    <content type="html"><![CDATA[<p>脉冲神经网络的学习<br><a id="more"></a></p><h2 id="（更新ing）"><a href="#（更新ing）" class="headerlink" title="（更新ing）"></a>（更新ing）</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;脉冲神经网络的学习&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="-技术" scheme="http://Supltz.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="-深度学习" scheme="http://Supltz.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>java基础</title>
