@@ -19,14 +19,16 @@
 <meta property="og:site_name" content="Supltz">
 <meta property="og:description" content="脉冲神经网络的学习">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://supltz.github.io/2020/06/20/snn.html/bug1.png">
 <meta property="article:published_time" content="2020-06-20T13:47:45.000Z">
-<meta property="article:modified_time" content="2020-06-19T16:31:44.160Z">
+<meta property="article:modified_time" content="2020-06-20T05:52:33.550Z">
 <meta property="article:author" content="Supltz">
 <meta property="article:tag" content="-深度学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://supltz.github.io/2020/06/20/snn.html/bug1.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1592584310609">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1592632390695">-->
 
   
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -166,7 +168,7 @@
     <div class="nexmoe-primary">
         <div class="nexmoe-post">
   
-      <div class="nexmoe-post-cover" style="padding-bottom: 48.61111111111111%;"> 
+      <div class="nexmoe-post-cover" style="padding-bottom: 34.72222222222222%;"> 
           <img data-src="/images/snn.png" data-sizes="auto" alt="SNN项目(SLAYER)在Windows10上的部署教程" class="lazyload">
           <h1>SNN项目(SLAYER)在Windows10上的部署教程</h1>
       </div>
@@ -174,8 +176,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>12 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -183,7 +185,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#（更新ing）"><span class="toc-number">1.</span> <span class="toc-text">（更新ing）</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境要求"><span class="toc-number">1.</span> <span class="toc-text">环境要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目部署"><span class="toc-number">2.</span> <span class="toc-text">项目部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows10-下会出现的问题"><span class="toc-number">3.</span> <span class="toc-text">windows10 下会出现的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题一"><span class="toc-number">3.1.</span> <span class="toc-text">问题一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题二"><span class="toc-number">3.2.</span> <span class="toc-text">问题二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Documentation"><span class="toc-number">4.</span> <span class="toc-text">Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">5.</span> <span class="toc-text">Examples</span></a></li></ol>
             </div>
         </div>
       </div>
@@ -192,7 +194,206 @@
 
   <article>
     <p>脉冲神经网络的学习<br><a id="more"></a></p>
-<h2 id="（更新ing）"><a href="#（更新ing）" class="headerlink" title="（更新ing）"></a>（更新ing）</h2>
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
+<li>PyTorch 1.5</li>
+<li>Anaconda 3</li>
+<li>python 3.6.5</li>
+<li>CUDA  10.2</li>
+<li>Visual Studio 2017<br><strong>只能在支持CUDA的GPU（最好是N卡）上运行，暂不支持在CPU上运行</strong></li>
+</ul>
+<h2 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h2><p>项目内有C++和CUDA的代码需要先把他们编译才能为python所用，进入项目目录执行：</p>
+<p><code>python setup.py install</code></p>
+<p>测试安装是否成功的代码:</p>
+<p><code>cd test</code></p>
+<p><code>python -m unittest</code></p>
+<h2 id="windows10-下会出现的问题"><a href="#windows10-下会出现的问题" class="headerlink" title="windows10 下会出现的问题"></a>windows10 下会出现的问题</h2><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><p><img data-sizes="auto" data-src="/2020/06/20/snn.html/bug1.png" alt="bug1" class="lazyload"></p>
+<pre><code>解决办法：
+1.在 项目内的argument_spec.h文件中,
+用 static const size_t DEPTH_LIMIT = 128; 代替 static constexpr size_t DEPTH_LIMIT = 128;
+2.在 项目内的module.h中,
+用 static const bool all_slots = false; 代替所有的 static constexpr bool all_slots = false;
+3.在项目内的cast.h文件中,
+用 explicit operator type&amp; () { return *((type*)(this-&gt;value)); } 代替 explicit operator type&amp;() { return *(this-&gt;value); }
+</code></pre><h3 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h3><p><em>出现如下报错</em></p>
+<pre><code>ERROR: test_slayer001 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer001
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer001.py&quot;, line 31, in
+a = slayer.psp(spike)
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer002 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer002
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer002.py&quot;, line 62, in
+aIn = slayer.psp(spikeIn)
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer003 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer003
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer003.py&quot;, line 67, in
+spikeOut = snn.forward(spikeIn)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer003.py&quot;, line 51, in forward
+spikeLayer1 = self.slayer.spike(self.slayer.psp(self.fc1(spikeInput)))
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer004 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer004
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer004.py&quot;, line 54, in
+spikeOut = snn.forward(spikeIn)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer004.py&quot;, line 40, in forward
+return self.slayer.spike(self.fc1(self.slayer.psp(spikeInput)))
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer005 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer005
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer005.py&quot;, line 82, in
+spikeOut = snn.forward(spikeIn)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer005.py&quot;, line 44, in forward
+spikeLayer1 = self.slayer.spike(self.fc1(self.slayer.psp(spikeInput)))
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer006 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer006
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer006.py&quot;, line 73, in
+spikeOut = snn.forward(spikeIn)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer006.py&quot;, line 42, in forward
+spikeLayer1 = self.slayer.spike(self.fc1(self.slayer.psp(spikeInput)))
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\github_projects\slayerPytorch\test/../src\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: testOddDimension (test_slayer007.TestPooling)
+Traceback (most recent call last):
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer007.py&quot;, line 78, in testOddDimension
+out = pool(inTensor)
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\torch\nn\modules\module.py&quot;, line 550, in call
+result = self.forward(*input, **kwargs)
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 520, in forward
+input = torch.cat((input, torch.zeros((input.shape[0], input.shape[1], input.shape[2]%self.weight.shape[2], input.shape[3], input.shape[4]), dtype=dtype).to(device)), 2)
+RuntimeError: CUDA out of memory. Tried to allocate 630.00 MiB (GPU 0; 4.00 GiB total capacity; 2.46 GiB already allocated; 490.47 MiB free; 2.48 GiB reserved in total by PyTorch)
+
+======================================================================
+ERROR: test_slayer010 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer010
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer010.py&quot;, line 61, in
+psp = slayer.psp(spikeIn)
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer011 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer011
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer011.py&quot;, line 35, in
+pspGT = slayer.psp(spikeIn)
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+
+======================================================================
+ERROR: test_slayer012 (unittest.loader._FailedTest)
+ImportError: Failed to import test module: test_slayer012
+Traceback (most recent call last):
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 428, in _find_test_path
+module = self._get_module_from_name(name)
+File &quot;F:\Anaconda\envs\pytorch\lib\unittest\loader.py&quot;, line 369, in _get_module_from_name
+import(name)
+File &quot;F:\github_projects\slayerPytorch\test\test_slayer012.py&quot;, line 41, in
+pspGT = slayer.psp(spikeIn)
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 142, in psp
+return _pspFunction.apply(spike, self.srmKernel, self.simulation[&#39;Ts&#39;])
+File &quot;F:\Anaconda\envs\pytorch\lib\site-packages\slayersnn-0.0.0-py3.6.egg\slayerSNN\slayer.py&quot;, line 672, in forward
+psp = slayerCuda.conv(spike.contiguous(), filter, Ts)
+RuntimeError: expected scalar type Float but found Double
+</code></pre><p><em>解决办法</em></p>
+<pre><code>在 src/slayer.py文件中, 找到101行和112行把torch.tensor改成torch.FloatTensor
+
+或者尝试：
+
+在slayer.py文件中，把torch.tensor(srmKernel) and torch.tensor(refKernel)改成torch.tensor(srmKernel).float() and torch.tensor(refKernel).float()
+
+</code></pre><h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><p>The complete documentation is available at <a href="https://bamsumit.github.io/slayerPytorch" target="_blank" rel="noopener">https://bamsumit.github.io/slayerPytorch</a> .</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example implementations can be found inside Examples folder.</p>
+<ul>
+<li><p>Run example MLP implementation</p>
+<p>  <code>&gt;&gt;&gt; python nmnistMLP.py</code></p>
+</li>
+<li><p>Run example CNN implementation</p>
+<p>  <code>&gt;&gt;&gt; python nmnistCNN.py</code></p>
+</li>
+</ul>
+
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
@@ -243,7 +444,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1592584310611"></script>-->
+<!--<script src="/js/app.js?v=1592632390696"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
